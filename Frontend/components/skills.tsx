@@ -14,7 +14,7 @@ export default function Skills() {
   const [skills, setSkills] = useState<Skill[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/skills")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/skills`)
       .then(res => res.json())
       .then(data => setSkills(data))
       .catch(err => console.error("Error fetching skills:", err));
