@@ -38,4 +38,7 @@ public class EmailService {
                 .bodyToMono(String.class)
                 .block();
     }
+
+    System.out.println("API KEY VALUE: " + apiKey);
+
 }
