@@ -17,7 +17,7 @@ export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/projects")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`)
       .then(res => res.json())
       .then(data => setProjects(data))
       .catch(err => console.error("Error fetching projects:", err));
