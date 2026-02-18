@@ -1,6 +1,0 @@
-services:
-  - type: web
-    name: portfolio-backend
-    plan: free
-    buildCommand: cd Backend && ./mvnw clean package
-    startCommand: cd Backend && java -jar target/*.jar
